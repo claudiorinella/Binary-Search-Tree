@@ -2,13 +2,16 @@
 
 #include <stdlib.h>
 
-#
-if !defined TRUE && !defined FALSE# define TRUE 1# define FALSE 0# endif
+#if !defined TRUE && !defined FALSE
+# define TRUE 1
+# define FALSE 0
+# endif
 
 typedef int Boolean;
 
-#
-ifndef NULL# define NULL((void * ) 0)# endif
+#ifndef NULL
+# define NULL((void * ) 0)
+# endif
 
 struct btree {
   int value;
@@ -16,7 +19,10 @@ struct btree {
   struct btree * right_ptr;
 };
 
-/*Definitions and comments of the functions at line 255
+/*Definitions and comments of the functions at line 254
+
+
+
 
 /*============Declarations=============*/
 void visit_r(struct btree * ptr);
@@ -29,6 +35,9 @@ int VisitAndCopy(struct btree * ptr, int * C, int i);
 void Common_Elem(struct btree * ptr1, struct btree * ptr2, struct btree ** ptr3, int a, int b);
 int n_elem_min(struct btree * pointer, int s, int d);
 int depth(struct btree * point, int d);
+
+
+
 
 /*=============MAIN===================*/
 
@@ -238,6 +247,10 @@ int main() {
   return 0;
 }
 
+
+
+
+
 /*============DEFINITIONS===============*/
 
 /*n_elem_min returns the number of nodes of the tree*/
@@ -256,6 +269,10 @@ int n_elem_min(struct btree * pointer, int s, int d) {
 
   return d;
 }
+
+
+
+
 
 /*"depth" returns the number which represents how deep is the tree*/
 
@@ -283,6 +300,9 @@ int depth(struct btree * point, int d) {
   }
 }
 
+
+
+
 void visit_r(struct btree * ptr) {
   if (ptr != NULL) {
 
@@ -294,6 +314,9 @@ void visit_r(struct btree * ptr) {
   printf("Let's go back... \n\n");
 }
 
+
+
+
 /*visit_pre= pre-order visit of the tree*/
 
 void visit_pre(struct btree * ptr) {
@@ -304,6 +327,9 @@ void visit_pre(struct btree * ptr) {
   }
 }
 
+
+
+
 /* visit_post= post-visit of tree*/
 
 void visit_post(struct btree * ptr) {
@@ -313,6 +339,9 @@ void visit_post(struct btree * ptr) {
     printf("%d\n\n", ptr -> value);
   }
 }
+
+
+
 
 /*"insert_inorder" will add a new element to the tree*/
 
@@ -330,9 +359,15 @@ void insert_inorder(struct btree ** ptrptr, int value) {
   }
 }
 
+
+
+
 void init(struct btree ** ptrptr) {
   * ptrptr = NULL;
 }
+
+
+
 
 /*"search" will search a number in the tree*/
 Boolean search(struct btree * ptr, int target) {
@@ -349,6 +384,9 @@ Boolean search(struct btree * ptr, int target) {
   } else // else the number is not in the tree
     return FALSE;
 }
+
+
+
 
 /*"VisitAndCopy" will copy the number of the tree in a array 
  *and it will return the number of nodes of the tree*/
@@ -369,6 +407,9 @@ int VisitAndCopy(struct btree * ptr, int * C, int i) {
 
   return i;
 }
+
+
+
 
 /*"Common_Elem" takes as input two pointers of two trees,
     How many nodes they have
