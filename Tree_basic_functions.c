@@ -19,7 +19,7 @@ struct btree {
   struct btree * right_ptr;
 };
 
-/*Definitions and comments of the functions at line 254
+/*Definitions and comments of the functions at line 254*/
 
 
 
