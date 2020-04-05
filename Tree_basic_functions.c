@@ -437,8 +437,8 @@ void Common_Elem(struct btree * ptr1, struct btree * ptr2, struct btree ** ptr3,
         val = A[i];
         insert_inorder(ptr3, val);
 
-        free A;
-        free B;
+        free (A);
+        free (B);
       }
     }
   }
