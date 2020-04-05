@@ -87,7 +87,7 @@ int main() {
     scanf("\n%d", & nb);
     if (nb > 0 && nb < 100) {
       Tb = calloc(nb, sizeof(int));
-      printf("\n\n Enter %d numbers", nb);
+      printf("\n\n Enter %d numbers\n", nb);
 
       for (i = 0; i < nb; i++) {
         scanf("\n%d", & Tb[i]);
