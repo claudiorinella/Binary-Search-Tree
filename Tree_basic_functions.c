@@ -55,12 +55,12 @@ int main() {
   do {
 
     printf("\n\n It is possible to create a Binary Search Tree named T alpha.");
-    printf("\n\n How many elements does the user want to insert? Enter a number.");
+    printf("\n\n How many elements does the user want to insert? Enter a number.\n");
 
     scanf("\n%d", & na);
     if (na > 0 && na < 100) {
       Ta = calloc(na, sizeof(int));
-      printf("\n\n Enter %d numbers", na);
+      printf("\n\n Enter %d numbers\n", na);
 
       for (i = 0; i < na; i++) {
         scanf("\n%d", & Ta[i]);
